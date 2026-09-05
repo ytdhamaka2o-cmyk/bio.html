@@ -340,7 +340,117 @@ footer{padding:40px 0;text-align:center;border-top:1px solid #ffffff0b;color:#7f
   }
 }
  <footer>Made by <strong>Mayank Kashyap</strong></footer>
+/* ================= PHOTO GALLERY VIEWER ================= */
 
+const photos = [
+  "images/gallery-01.jpg"
+];
+
+let currentPhoto = 0;
+let zoomLevel = 1;
+
+function openPhoto(index){
+  currentPhoto = index;
+  zoomLevel = 1;
+
+  document.getElementById("photoViewer").classList.add("active");
+
+  updatePhoto();
+}
+
+function updatePhoto(){
+
+  const img = document.getElementById("viewerImage");
+
+  img.src = photos[currentPhoto];
+
+  zoomLevel = 1;
+
+  img.style.transform =
+    "translate(0px, 0px) scale(1)";
+}
+
+function closePhoto(){
+  document.getElementById("photoViewer").classList.remove("active");
+}
+
+function nextPhoto(){
+
+  if(photos.length <= 1) return;
+
+  currentPhoto++;
+
+  if(currentPhoto >= photos.length){
+    currentPhoto = 0;
+  }
+
+  updatePhoto();
+}
+
+function previousPhoto(){
+
+  if(photos.length <= 1) return;
+
+  currentPhoto--;
+
+  if(currentPhoto < 0){
+    currentPhoto = photos.length - 1;
+  }
+
+  updatePhoto();
+}
+
+function zoomIn(){
+
+  zoomLevel += 0.25;
+
+  if(zoomLevel > 4){
+    zoomLevel = 4;
+  }
+
+  document.getElementById("viewerImage").style.transform =
+    `scale(${zoomLevel})`;
+}
+
+function zoomOut(){
+
+  zoomLevel -= 0.25;
+
+  if(zoomLevel < 1){
+    zoomLevel = 1;
+  }
+
+  document.getElementById("viewerImage").style.transform =
+    `scale(${zoomLevel})`;
+}
+
+/* ESC key se close */
+
+document.addEventListener("keydown",function(e){
+
+  if(e.key === "Escape"){
+    closePhoto();
+  }
+
+  if(e.key === "ArrowRight"){
+    nextPhoto();
+  }
+
+  if(e.key === "ArrowLeft"){
+    previousPhoto();
+  }
+
+});
+
+/* Viewer ke background par click karke close */
+
+document.getElementById("photoViewer").addEventListener("click",function(e){
+
+  if(e.target === this){
+    closePhoto();
+  }
+
+});
 <script>
 const countKey='bio_ashutosh_total_views';
 let count=Number(localStorage.getItem(countKey)||0)+1;
