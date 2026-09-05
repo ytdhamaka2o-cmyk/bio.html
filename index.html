@@ -451,7 +451,35 @@ document.getElementById("photoViewer").addEventListener("click",function(e){
   }
 
 });
-<script>
+  <!-- FULLSCREEN PHOTO VIEWER -->
+
+<div class="photo-viewer" id="photoViewer">
+
+  <button class="viewer-close" onclick="closePhoto()">×</button>
+
+  <button class="viewer-btn viewer-prev"
+          onclick="previousPhoto()">‹</button>
+
+  <img
+    id="viewerImage"
+    class="viewer-img"
+    src=""
+    alt="Gallery Photo"
+  >
+
+  <button class="viewer-btn viewer-next"
+          onclick="nextPhoto()">›</button>
+
+  <div class="zoom-controls">
+
+    <button onclick="zoomOut()">−</button>
+
+    <button onclick="zoomIn()">+</button>
+
+  </div>
+
+</div> 
+   <script>
 const countKey='bio_ashutosh_total_views';
 let count=Number(localStorage.getItem(countKey)||0)+1;
 localStorage.setItem(countKey,count);
