@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bio with Ashutosh Modi</title>
+<meta name="description" content="Bio with Ashutosh Modi — Class 9 & 10 Biology notes and exam preparation.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+:root{--bg:#030914;--bg2:#071426;--card:rgba(13,28,47,.72);--gold:#e4c06a;--gold2:#fff0b2;--white:#f8fafc;--muted:#9eacbf;--line:rgba(228,192,106,.18)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 15% 15%,#12345a55,transparent 30%),radial-gradient(circle at 85% 20%,#6a531b22,transparent 28%),linear-gradient(135deg,#020711,#071426 55%,#030914)}
+body:after{content:"";position:fixed;inset:0;z-index:-2;opacity:.18;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(to bottom,black,transparent 75%)}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 24px}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(2,9,20,.58);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;font-size:18px}.brand span{color:var(--gold)}
+nav{display:flex;gap:25px}nav a{font-size:13px;color:#cbd5e1;transition:.3s}nav a:hover{color:var(--gold)}
+.visitor{position:fixed;right:22px;top:88px;z-index:45;padding:9px 14px;border:1px solid var(--line);background:#081526cc;border-radius:99px;color:var(--gold);font-size:12px;box-shadow:0 10px 35px #0007}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:76px}.hero-content{max-width:800px}
+.eyebrow{display:inline-flex;gap:9px;align-items:center;padding:9px 14px;border:1px solid var(--line);border-radius:99px;background:#ffffff05;color:var(--gold);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;animation:fadeUp 1s .15s both}
+h1{font-family:"Playfair Display",serif;font-size:clamp(54px,8vw,104px);line-height:.95;margin:25px 0 22px;letter-spacing:-4px;animation:fadeUp 1s .3s both}h1 em{color:var(--gold);font-style:normal}
+.hero p{max-width:680px;color:var(--muted);font-size:18px;line-height:1.8;animation:fadeUp 1s .45s both}.actions{display:flex;gap:13px;margin-top:30px;animation:fadeUp 1s .6s both}
+.btn{border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:12px;font-weight:700;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#15120a;box-shadow:0 12px 35px #d8b75a25;transition:.3s}.btn:hover{transform:translateY(-4px);box-shadow:0 18px 50px #d8b75a38}.ghost{background:#ffffff06;color:#fff;border:1px solid #ffffff18;box-shadow:none}
+.orbit{position:absolute;right:2%;top:22%;width:410px;height:410px;border:1px solid #d9b45a25;border-radius:50%;animation:spin 24s linear infinite}.orbit:before,.orbit:after{content:"";position:absolute;border-radius:50%;background:var(--gold);box-shadow:0 0 35px var(--gold)}.orbit:before{width:11px;height:11px;left:16%;top:19%}.orbit:after{width:7px;height:7px;right:13%;bottom:22%}.core{position:absolute;inset:25%;border-radius:50%;background:radial-gradient(circle,#d9b45a30,#08182c);border:1px solid #d9b45a44;display:grid;place-items:center;color:var(--gold);font-weight:800;letter-spacing:2px;box-shadow:inset 0 0 80px #d9b45a0b}
+section{padding:110px 0}.section-head{margin-bottom:40px}.section-head .mini{color:var(--gold);font-size:12px;letter-spacing:2px;text-transform:uppercase}.section-head h2{font-family:"Playfair Display",serif;font-size:48px;margin:8px 0}.section-head p{color:var(--muted);max-width:700px}
+.chapter-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.chapter{border:1px solid #ffffff0c;background:linear-gradient(145deg,#0c1b2dba,#071322cc);border-radius:22px;padding:28px;position:relative;overflow:hidden;transition:.45s}.chapter:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:#d9b45a12;filter:blur(5px);right:-70px;top:-80px}.chapter:hover{transform:translateY(-8px);border-color:#d9b45a55;box-shadow:0 25px 70px #0007}.num{color:var(--gold);font-size:12px;letter-spacing:2px}.chapter h3{font-size:25px;margin:9px 0}.chapter>p{color:var(--muted);margin-bottom:20px}.open-notes{width:100%}.notes{display:none;border-top:1px solid #ffffff10;margin-top:20px;padding-top:18px}.notes.show{display:block;animation:fadeUp .45s both}.notes h4{color:var(--gold);margin:20px 0 8px}.notes p,.notes li{color:#c1ccd9;font-size:14px}.notes ul{padding-left:20px}.qa{background:#ffffff05;border:1px solid #ffffff08;border-radius:13px;padding:13px;margin:9px 0}.qa b{display:block;margin-bottom:5px}.qa span{font-size:13px;color:#aebaca}
+.soon{border:1px dashed #d9b45a55;border-radius:22px;padding:70px 20px;text-align:center;background:#ffffff03}.soon h3{font-size:34px;color:var(--gold);margin:0 0 10px}.soon p{color:var(--muted)}
+.profile{display:grid;grid-template-columns:280px 1fr;gap:45px;align-items:center}.pic{height:280px;border-radius:26px;border:1px dashed #d9b45a77;display:grid;place-items:center;text-align:center;color:#8795a7;background:linear-gradient(145deg,#ffffff06,#ffffff01);position:relative;overflow:hidden}.pic:after{content:"";position:absolute;width:130%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:scan 3s linear infinite}.profile h2{font-family:"Playfair Display",serif;font-size:52px;margin:0}.profile p{color:var(--muted);font-size:16px}.phone{color:var(--gold)!important;font-weight:700}
+footer{padding:40px 0;text-align:center;border-top:1px solid #ffffff0b;color:#7f8da0}footer strong{color:var(--gold)}
+.modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:#01050de8;backdrop-filter:blur(12px)}.modal-box{width:min(580px,calc(100% - 30px));padding:48px 30px;text-align:center;border:1px solid #d9b45a55;border-radius:28px;background:linear-gradient(145deg,#10243c,#06101f);box-shadow:0 35px 100px #000c;animation:modalIn .65s cubic-bezier(.2,.9,.2,1)}.modal-box .spark{font-size:40px;animation:pulse 1.4s infinite}.modal-box h2{font-family:"Playfair Display",serif;font-size:40px;margin:12px 0}.modal-box h2 span{color:var(--gold)}.modal-box p{color:var(--muted);margin-bottom:25px}
+.reveal{opacity:0;transform:translateY(35px);transition:1s cubic-bezier(.2,.8,.2,1)}.reveal.visible{opacity:1;transform:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}@keyframes modalIn{from{opacity:0;transform:scale(.82) translateY(20px)}to{opacity:1;transform:none}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{50%{transform:scale(1.12);filter:drop-shadow(0 0 15px var(--gold))}}@keyframes scan{from{transform:translateY(-160px)}to{transform:translateY(440px)}}
+@media(max-width:850px){nav{display:none}.orbit{opacity:.25;right:-170px;top:30%}.chapter-grid{grid-template-columns:1fr}.profile{grid-template-columns:1fr}.pic{max-width:280px;margin:auto}.hero p{font-size:16px}h1{letter-spacing:-2px}.visitor{top:83px;right:12px}}
+</style>
+</head>
+<body>
+<div class="modal" id="welcome">
+ <div class="modal-box">
+  <div class="spark">✦</div>
+  <h2>Welcome to <span>Bio</span></h2>
+  <h2>with Ashutosh Modi</h2>
+  <p>Explore clear Biology notes, important concepts and exam-focused questions.</p>
+  <button class="btn" onclick="enterSite()">Enter Website</button>
+ </div>
+</div>
+
+<header><div class="wrap nav"><a class="brand" href="#">Bio <span>with Ashutosh Modi</span></a><nav><a href="#notes">Notes</a><a href="#profile">Profile</a><a href="#gallery">Gallery</a></nav></div></header>
+<div class="visitor">👁 Visitors: <b id="count">0</b></div>
+
+<main>
+<section class="hero"><div class="wrap hero-content">
+ <div class="eyebrow">Biology • Classes 9 & 10</div>
+ <h1>Learn Biology.<br><em>Understand Better.</em></h1>
+ <p>Bio with Ashutosh Modi — chapter-wise learning designed to make Biology concepts simple, clear and exam-ready.</p>
+ <div class="actions"><a class="btn" href="#notes">Explore Notes</a><a class="btn ghost" href="#profile">Meet Ashutosh Modi</a></div>
+ </div><div class="orbit"><div class="core">BIOLOGY</div></div></section>
+
+<section id="notes"><div class="wrap">
+ <div class="section-head reveal"><div class="mini">Chapter Wise Notes</div><h2>Class 10 Biology</h2><p>Abhi detailed notes ke liye 3 selected chapters available hain. Baaki chapters Coming Soon hain.</p></div>
+ <div class="chapter-grid">
+
+ <article class="chapter reveal"><div class="num">CLASS 10 • CHAPTER 01</div><h3>Life Processes</h3><p>Nutrition, respiration, transportation and excretion — concepts, processes and exam questions.</p><button class="btn open-notes">Open Detailed Notes</button>
+ <div class="notes">
+ <h4>1. Life Processes — Overview</h4><p>Life processes are the basic activities required to maintain an organism. In Class 10, the major life processes are nutrition, respiration, transportation and excretion.</p>
+ <h4>2. Nutrition</h4><p>Nutrition provides materials and energy needed for growth, repair and maintenance. In autotrophic nutrition, organisms such as green plants prepare food using carbon dioxide and water in the presence of sunlight and chlorophyll. In heterotrophic nutrition, organisms obtain food from other organisms.</p>
+ <p>Human digestion involves ingestion, digestion, absorption, assimilation and egestion. The mouth begins digestion; the stomach provides an acidic medium and enzymes; the small intestine completes digestion and absorbs nutrients through villi; the large intestine mainly absorbs water.</p>
+ <h4>3. Respiration</h4><p>Respiration releases energy from food. Aerobic respiration uses oxygen and generally releases more energy, while anaerobic pathways occur without oxygen. In humans, gas exchange occurs in the alveoli of the lungs. The respiratory system includes nasal passages, trachea, bronchi, bronchioles and lungs.</p>
+ <h4>4. Transportation</h4><p>In humans, blood transports oxygen, carbon dioxide, nutrients, hormones and wastes. The heart pumps blood through pulmonary and systemic circulation. Red blood cells contain haemoglobin. Plants transport water and minerals through xylem and food through phloem.</p>
+ <h4>5. Excretion</h4><p>Excretion removes metabolic wastes. In humans, kidneys filter blood and form urine through processes including filtration, reabsorption and secretion. Plants remove or store wastes in several ways, including diffusion and storage in leaves or other parts.</p>
+ <h4>Easy Questions</h4><div class="qa"><b>Q. What is nutrition?</b><span>Ans. It is the process by which an organism obtains and uses food.</span></div><div class="qa"><b>Q. Where does gas exchange occur in human lungs?</b><span>Ans. Mainly across the thin walls of the alveoli.</span></div><div class="qa"><b>Q. What is the function of xylem?</b><span>Ans. It transports water and minerals from roots to other parts of a plant.</span></div>
+ <h4>Exam-Level Questions</h4><div class="qa"><b>Q. Why is separation of oxygenated and deoxygenated blood important in humans?</b><span>Ans. It helps maintain efficient oxygen supply by preventing significant mixing of oxygen-rich and oxygen-poor blood and supports the high energy requirements of the body.</span></div><div class="qa"><b>Q. Explain the role of villi in the small intestine.</b><span>Ans. Villi greatly increase the absorptive surface area and contain a rich network of blood vessels, helping digested nutrients enter the blood efficiently.</span></div>
+ </div></article>
+
+ <article class="chapter reveal"><div class="num">CLASS 10 • CHAPTER 02</div><h3>Control and Coordination</h3><p>Nervous system, reflex action, brain, plant hormones and animal hormones.</p><button class="btn open-notes">Open Detailed Notes</button>
+ <div class="notes">
+ <h4>1. Coordination</h4><p>Coordination enables an organism to detect changes and produce suitable responses. In animals it mainly involves the nervous system and endocrine system. Plants coordinate responses using chemical substances and growth movements.</p>
+ <h4>2. Nervous System</h4><p>A neuron is the structural and functional unit of the nervous system. It receives and transmits information. A typical neuron has dendrites, a cell body and an axon. Information passes between neurons across synapses using chemical messengers.</p>
+ <h4>3. Reflex Action</h4><p>A reflex action is a quick, automatic response to a stimulus. Many reflexes are coordinated through the spinal cord, forming a reflex arc that allows a rapid response before conscious processing is completed.</p>
+ <h4>4. Human Brain</h4><p>The brain is protected by the skull and associated protective structures. Major regions include the forebrain, midbrain and hindbrain. Different areas help with thinking, sensory processing, movement, balance and involuntary functions.</p>
+ <h4>5. Plant Coordination</h4><p>Plants respond to stimuli through movements and chemical signals. Auxin is involved in growth responses such as phototropism. Other plant hormones include gibberellins, cytokinins, abscisic acid and ethylene, each with characteristic roles.</p>
+ <h4>6. Hormonal Coordination</h4><p>Endocrine glands release hormones into the bloodstream. Hormones regulate processes such as growth, metabolism, reproduction and responses to stress. Examples include insulin, thyroxine, adrenaline and growth hormone.</p>
+ <h4>Easy Questions</h4><div class="qa"><b>Q. What is a reflex action?</b><span>Ans. A rapid and automatic response to a stimulus.</span></div><div class="qa"><b>Q. What is the basic unit of the nervous system?</b><span>Ans. Neuron.</span></div>
+ <h4>Exam-Level Questions</h4><div class="qa"><b>Q. How does a reflex arc help an organism?</b><span>Ans. It provides a rapid pathway for responding to a stimulus, helping reduce response time.</span></div><div class="qa"><b>Q. How do hormones differ from nervous impulses?</b><span>Ans. Nervous signals are generally rapid and travel through neurons, whereas hormones are chemical messengers transported through body fluids and often produce slower, longer-lasting effects.</span></div>
+ </div></article>
+
+ <article class="chapter reveal"><div class="num">CLASS 9 • CHAPTER 01</div><h3>The Fundamental Unit of Life</h3><p>Cell structure, organelles, transport and cell division — detailed foundation for Biology.</p><button class="btn open-notes">Open Detailed Notes</button>
+ <div class="notes">
+ <h4>1. Cell — Basic Unit of Life</h4><p>The cell is the basic structural and functional unit of living organisms. Organisms may be unicellular or multicellular. Cells vary in shape and size according to their functions.</p>
+ <h4>2. Plasma Membrane</h4><p>The plasma membrane forms the boundary of the cell and is selectively permeable. It regulates movement of substances into and out of the cell. Diffusion is movement from higher concentration to lower concentration. Osmosis is the movement of water through a selectively permeable membrane.</p>
+ <h4>3. Cell Wall</h4><p>Plant cells have a rigid cell wall outside the plasma membrane. It provides support and protection and helps prevent the cell from bursting when water enters.</p>
+ <h4>4. Nucleus</h4><p>The nucleus contains genetic material and helps control cellular activities. Chromosomes carry genes, which contain hereditary information.</p>
+ <h4>5. Cell Organelles</h4><ul><li><b>Mitochondria:</b> sites of aerobic respiration and major energy release.</li><li><b>Endoplasmic reticulum:</b> involved in synthesis and transport of materials.</li><li><b>Golgi apparatus:</b> modifies, packages and helps transport substances.</li><li><b>Lysosomes:</b> contain digestive enzymes and help break down materials.</li><li><b>Ribosomes:</b> involved in protein synthesis.</li><li><b>Plastids:</b> plant-cell organelles; chloroplasts carry out photosynthesis.</li><li><b>Vacuoles:</b> storage structures; plant cells often have a large central vacuole.</li></ul>
+ <h4>6. Cell Division</h4><p>Cell division is important for growth, repair and reproduction. Mitosis generally produces two genetically similar daughter cells, while meiosis is associated with formation of reproductive cells and reduces chromosome number.</p>
+ <h4>Easy Questions</h4><div class="qa"><b>Q. Why is the plasma membrane selectively permeable?</b><span>Ans. It permits some substances to cross while restricting others.</span></div><div class="qa"><b>Q. What is the function of mitochondria?</b><span>Ans. They are major sites of aerobic respiration and energy release.</span></div>
+ <h4>Exam-Level Questions</h4><div class="qa"><b>Q. What happens to a plant cell in a hypotonic solution?</b><span>Ans. Water enters the cell by osmosis. The cell becomes turgid because the cell wall resists excessive expansion.</span></div><div class="qa"><b>Q. Why are lysosomes called digestive sacs?</b><span>Ans. They contain enzymes that can digest worn-out cell components and certain foreign materials.</span></div>
+ </div></article>
+ </div>
+
+ <div style="margin-top:70px" class="section-head reveal"><div class="mini">Remaining Chapters</div><h2>Coming Soon</h2></div>
+ <div class="soon reveal"><h3>More Biology Chapters 🚀</h3><p>Baaki Class 9 & 10 chapters ke detailed notes, questions and answers yahan future updates mein add kiye jayenge.</p></div>
+</div></section>
+
+<section id="profile"><div class="wrap"><div class="section-head reveal"><div class="mini">Professional Profile</div><h2>Ashutosh Modi</h2></div>
+ <div class="profile reveal"><div class="pic">PROFILE<br>PICTURE<br>PLACEHOLDER</div><div><h2>Ashutosh Modi</h2><p>Biology educator profile section. Yahan future mein profile photo, introduction, teaching details aur additional information add ki ja sakti hai.</p><p class="phone">📞 +91 9876543210</p></div></div>
+</div></section>
+
+<section id="gallery"><div class="wrap"><div class="section-head reveal"><div class="mini">Gallery</div><h2>Biology Memories</h2></div><div class="soon reveal"><h3>COMING SOON 🚀</h3><p>Biology-related photos will be added here soon.</p></div></div></section>
+</main>
+<footer>Made by <strong>Mayank Kashyap</strong></footer>
+
+<script>
+const countKey='bio_ashutosh_total_views';
+let count=Number(localStorage.getItem(countKey)||0)+1;
+localStorage.setItem(countKey,count);
+document.getElementById('count').textContent=count.toLocaleString();
+
+function enterSite(){
+ document.getElementById('welcome').style.display='none';
+ // Short Web Audio chime, triggered by the user's click so browsers allow it.
+ try{
+  const C=window.AudioContext||window.webkitAudioContext; if(C){
+   const c=new C(),o=c.createOscillator(),g=c.createGain();
+   o.type='sine';o.frequency.setValueAtTime(660,c.currentTime);
+   o.frequency.exponentialRampToValueAtTime(990,c.currentTime+.22);
+   g.gain.setValueAtTime(.0001,c.currentTime);g.gain.exponentialRampToValueAtTime(.16,c.currentTime+.03);g.gain.exponentialRampToValueAtTime(.0001,c.currentTime+.42);
+   o.connect(g);g.connect(c.destination);o.start();o.stop(c.currentTime+.45);
+  }
+ }catch(e){}
+}
+document.querySelectorAll('.open-notes').forEach(btn=>btn.addEventListener('click',()=>{
+ const n=btn.nextElementSibling;n.classList.toggle('show');btn.textContent=n.classList.contains('show')?'Close Detailed Notes':'Open Detailed Notes';
+}));
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+</script>
+</body>
+</html>
