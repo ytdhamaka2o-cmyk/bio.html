@@ -1821,6 +1821,58 @@
     document.body.style.overflow = "";
 
   </script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+  import {
+    getFirestore,
+    doc,
+    getDoc,
+    setDoc,
+    updateDoc,
+    increment
+  } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyDLHbXyPMKC-9vy63u1z2tfa6KMXB4GE7s",
+    authDomain: "bio-with-ashutosh.firebaseapp.com",
+    projectId: "bio-with-ashutosh",
+    storageBucket: "bio-with-ashutosh.firebasestorage.app",
+    messagingSenderId: "556803049393",
+    appId: "1:556803049393:web:8910241ec7c969714f5f90"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const visitorRef = doc(db, "websiteStats", "global");
+
+  async function updateVisitorCounter() {
+    try {
+      const snapshot = await getDoc(visitorRef);
+
+      if (!snapshot.exists()) {
+        await setDoc(visitorRef, {
+          visitors: 1
+        });
+      } else {
+        await updateDoc(visitorRef, {
+          visitors: increment(1)
+        });
+      }
+
+      const updated = await getDoc(visitorRef);
+      const count = updated.data().visitors || 0;
+
+      document.getElementById("visitorCount").textContent =
+        count.toLocaleString("en-IN");
+
+    } catch (error) {
+      console.error("Visitor counter error:", error);
+      document.getElementById("visitorCount").textContent = "—";
+    }
+  }
+
+  updateVisitorCounter();
+</script>
 </body>
 </html>
