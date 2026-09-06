@@ -1,1647 +1,1826 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Bio with Ashutosh Modi</title>
-<meta name="description" content="Bio with Ashutosh Modi — Class 9 & 10 Biology notes and exam preparation.">
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
-
-:root{
---bg:#030914;
---bg2:#071426;
---card:rgba(13,28,47,.72);
---gold:#e4c06a;
---gold2:#fff0b2;
---white:#f8fafc;
---muted:#9eacbf;
---line:rgba(228,192,106,.18);
-}
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-
-body{
-margin:0;
-background:var(--bg);
-color:var(--white);
-font-family:Inter,Arial,sans-serif;
-overflow-x:hidden;
-}
-
-body:before{
-content:"";
-position:fixed;
-inset:0;
-z-index:-3;
-background:
-radial-gradient(circle at 15% 15%,#12345a55,transparent 30%),
-radial-gradient(circle at 85% 20%,#6a531b22,transparent 28%),
-linear-gradient(135deg,#020711,#071426 55%,#030914);
-}
-
-body:after{
-content:"";
-position:fixed;
-inset:0;
-z-index:-2;
-opacity:.18;
-background-image:
-linear-gradient(#fff 1px,transparent 1px),
-linear-gradient(90deg,#fff 1px,transparent 1px);
-background-size:70px 70px;
-mask-image:linear-gradient(to bottom,black,transparent 75%);
-}
-
-a{
-color:inherit;
-text-decoration:none;
-}
-
-.wrap{
-max-width:1180px;
-margin:auto;
-padding:0 24px;
-}
-
-header{
-position:fixed;
-top:0;
-left:0;
-right:0;
-z-index:50;
-background:rgba(2,9,20,.58);
-backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(255,255,255,.06);
-}
-
-.nav{
-height:76px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-.brand{
-font-weight:800;
-font-size:18px;
-}
-
-.brand span{
-color:var(--gold);
-}
-
-nav{
-display:flex;
-gap:25px;
-}
-
-nav a{
-font-size:13px;
-color:#cbd5e1;
-transition:.3s;
-}
-
-nav a:hover{
-color:var(--gold);
-}
-
-.visitor{
-position:fixed;
-right:22px;
-top:88px;
-z-index:45;
-padding:9px 14px;
-border:1px solid var(--line);
-background:#081526cc;
-border-radius:99px;
-color:var(--gold);
-font-size:12px;
-box-shadow:0 10px 35px #0007;
-}
-
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-position:relative;
-padding-top:76px;
-}
-
-.hero-content{
-max-width:800px;
-}
-
-.eyebrow{
-display:inline-flex;
-gap:9px;
-align-items:center;
-padding:9px 14px;
-border:1px solid var(--line);
-border-radius:99px;
-background:#ffffff05;
-color:var(--gold);
-font-size:12px;
-letter-spacing:1.5px;
-text-transform:uppercase;
-animation:fadeUp 1s .15s both;
-}
-
-h1{
-font-family:"Playfair Display",serif;
-font-size:clamp(54px,8vw,104px);
-line-height:.95;
-margin:25px 0 22px;
-letter-spacing:-4px;
-animation:fadeUp 1s .3s both;
-}
-
-h1 em{
-color:var(--gold);
-font-style:normal;
-}
-
-.hero p{
-max-width:680px;
-color:var(--muted);
-font-size:18px;
-line-height:1.8;
-animation:fadeUp 1s .45s both;
-}
-
-.actions{
-display:flex;
-gap:13px;
-margin-top:30px;
-animation:fadeUp 1s .6s both;
-}
-
-.btn{
-border:0;
-cursor:pointer;
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:13px 20px;
-border-radius:12px;
-font-weight:700;
-background:linear-gradient(135deg,var(--gold2),var(--gold));
-color:#15120a;
-box-shadow:0 12px 35px #d8b75a25;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-4px);
-box-shadow:0 18px 50px #d8b75a38;
-}
-
-.ghost{
-background:#ffffff06;
-color:#fff;
-border:1px solid #ffffff18;
-box-shadow:none;
-}
-
-.orbit{
-position:absolute;
-right:2%;
-top:22%;
-width:410px;
-height:410px;
-border:1px solid #d9b45a25;
-border-radius:50%;
-animation:spin 24s linear infinite;
-}
-
-.orbit:before,
-.orbit:after{
-content:"";
-position:absolute;
-border-radius:50%;
-background:var(--gold);
-box-shadow:0 0 35px var(--gold);
-}
-
-.orbit:before{
-width:11px;
-height:11px;
-left:16%;
-top:19%;
-}
-
-.orbit:after{
-width:7px;
-height:7px;
-right:13%;
-bottom:22%;
-}
-
-.core{
-position:absolute;
-inset:25%;
-border-radius:50%;
-background:radial-gradient(circle,#d9b45a30,#08182c);
-border:1px solid #d9b45a44;
-display:grid;
-place-items:center;
-color:var(--gold);
-font-weight:800;
-letter-spacing:2px;
-box-shadow:inset 0 0 80px #d9b45a0b;
-}
-
-section{
-padding:110px 0;
-}
-
-.section-head{
-margin-bottom:40px;
-}
-
-.section-head .mini{
-color:var(--gold);
-font-size:12px;
-letter-spacing:2px;
-text-transform:uppercase;
-}
-
-.section-head h2{
-font-family:"Playfair Display",serif;
-font-size:48px;
-margin:8px 0;
-}
-
-.section-head p{
-color:var(--muted);
-max-width:700px;
-}
-
-.chapter-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-}
-
-.chapter{
-border:1px solid #ffffff0c;
-background:linear-gradient(145deg,#0c1b2dba,#071322cc);
-border-radius:22px;
-padding:28px;
-position:relative;
-overflow:hidden;
-transition:.45s;
-}
-
-.chapter:before{
-content:"";
-position:absolute;
-width:180px;
-height:180px;
-border-radius:50%;
-background:#d9b45a12;
-filter:blur(5px);
-right:-70px;
-top:-80px;
-}
-
-.chapter:hover{
-transform:translateY(-8px);
-border-color:#d9b45a55;
-box-shadow:0 25px 70px #0007;
-}
-
-.num{
-color:var(--gold);
-font-size:12px;
-letter-spacing:2px;
-}
-
-.chapter h3{
-font-size:25px;
-margin:9px 0;
-}
-
-.chapter>p{
-color:var(--muted);
-margin-bottom:20px;
-}
-
-.open-notes{
-width:100%;
-}
-
-.notes{
-display:none;
-border-top:1px solid #ffffff10;
-margin-top:20px;
-padding-top:18px;
-}
-
-.notes.show{
-display:block;
-animation:fadeUp .45s both;
-}
-
-.notes h4{
-color:var(--gold);
-margin:20px 0 8px;
-}
-
-.notes p,
-.notes li{
-color:#c1ccd9;
-font-size:14px;
-}
-
-.notes ul{
-padding-left:20px;
-}
-
-.qa{
-background:#ffffff05;
-border:1px solid #ffffff08;
-border-radius:13px;
-padding:13px;
-margin:9px 0;
-}
-
-.qa b{
-display:block;
-margin-bottom:5px;
-}
-
-.qa span{
-font-size:13px;
-color:#aebaca;
-}
-
-.soon{
-border:1px dashed #d9b45a55;
-border-radius:22px;
-padding:70px 20px;
-text-align:center;
-background:#ffffff03;
-}
-
-.soon h3{
-font-size:34px;
-color:var(--gold);
-margin:0 0 10px;
-}
-
-.soon p{
-color:var(--muted);
-}
-
-.profile{
-display:grid;
-grid-template-columns:280px 1fr;
-gap:45px;
-align-items:center;
-}
-
-.pic{
-height:280px;
-border-radius:26px;
-border:1px dashed #d9b45a77;
-display:grid;
-place-items:center;
-text-align:center;
-color:#8795a7;
-background:linear-gradient(145deg,#ffffff06,#ffffff01);
-position:relative;
-overflow:hidden;
-}
-
-.pic:after{
-content:"";
-position:absolute;
-width:130%;
-height:2px;
-background:linear-gradient(90deg,transparent,var(--gold),transparent);
-animation:scan 3s linear infinite;
-}
-
-.profile h2{
-font-family:"Playfair Display",serif;
-font-size:52px;
-margin:0;
-}
-
-.profile p{
-color:var(--muted);
-font-size:16px;
-}
-
-.phone{
-color:var(--gold)!important;
-font-weight:700;
-}
-
-footer{
-padding:40px 0;
-text-align:center;
-border-top:1px solid #ffffff0b;
-color:#7f8da0;
-}
-
-footer strong{
-color:var(--gold);
-}
-
-/* ================= GALLERY ================= */
-
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-margin-top:30px;
-}
-
-.gallery-item{
-position:relative;
-aspect-ratio:1/1;
-overflow:hidden;
-border-radius:18px;
-border:1px solid #ffffff12;
-background:#071426;
-cursor:pointer;
-transition:.4s ease;
-}
-
-.gallery-item img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-transition:.5s ease;
-}
-
-.gallery-item:hover{
-transform:translateY(-6px);
-border-color:#d9b45a66;
-box-shadow:0 20px 55px #0009;
-}
-
-.gallery-item:hover img{
-transform:scale(1.08);
-}
-
-.gallery-label{
-position:absolute;
-left:12px;
-bottom:12px;
-padding:7px 11px;
-border-radius:8px;
-background:#020914cc;
-backdrop-filter:blur(8px);
-color:#fff;
-font-size:12px;
-}
-
-/* FULLSCREEN VIEWER */
-
-.photo-viewer{
-position:fixed;
-inset:0;
-z-index:200;
-background:#000e;
-backdrop-filter:blur(12px);
-display:none;
-align-items:center;
-justify-content:center;
-overflow:hidden;
-}
-
-.photo-viewer.active{
-display:flex;
-}
-
-.viewer-img{
-max-width:90vw;
-max-height:88vh;
-object-fit:contain;
-user-select:none;
-cursor:grab;
-transition:transform .2s ease;
-transform-origin:center;
-}
-
-.viewer-img.dragging{
-cursor:grabbing;
-}
-
-.viewer-close{
-position:absolute;
-top:20px;
-right:25px;
-width:45px;
-height:45px;
-border:1px solid #ffffff25;
-border-radius:50%;
-background:#071426dd;
-color:#fff;
-font-size:25px;
-cursor:pointer;
-z-index:5;
-}
-
-.viewer-btn{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-width:48px;
-height:48px;
-border:1px solid #ffffff20;
-border-radius:50%;
-background:#071426dd;
-color:#fff;
-font-size:24px;
-cursor:pointer;
-z-index:5;
-}
-
-.viewer-prev{
-left:25px;
-}
-
-.viewer-next{
-right:25px;
-}
-
-.zoom-controls{
-position:absolute;
-bottom:25px;
-left:50%;
-transform:translateX(-50%);
-display:flex;
-gap:8px;
-z-index:5;
-}
-
-.zoom-controls button{
-width:45px;
-height:45px;
-border:1px solid #ffffff20;
-border-radius:12px;
-background:#071426dd;
-color:#fff;
-font-size:20px;
-cursor:pointer;
-}
-
-.zoom-controls button:hover,
-.viewer-close:hover,
-.viewer-btn:hover{
-background:var(--gold);
-color:#111;
-}
-
-/* MOBILE */
-
-@media(max-width:850px){
-
-nav{
-display:none;
-}
-
-.orbit{
-opacity:.25;
-right:-170px;
-top:30%;
-}
-
-.chapter-grid{
-grid-template-columns:1fr;
-}
-
-.profile{
-grid-template-columns:1fr;
-}
-
-.pic{
-max-width:280px;
-margin:auto;
-}
-
-.hero p{
-font-size:16px;
-}
-
-h1{
-letter-spacing:-2px;
-}
-
-.visitor{
-top:83px;
-right:12px;
-}
-}
-
-@media(max-width:700px){
-
-.gallery-grid{
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-}
-
-.gallery-item{
-border-radius:13px;
-}
-
-.viewer-img{
-max-width:96vw;
-max-height:82vh;
-}
-
-.viewer-prev{
-left:8px;
-}
-
-.viewer-next{
-right:8px;
-}
-
-.viewer-btn{
-width:40px;
-height:40px;
-}
-
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bio with Ashutosh Modi | Biology Classes 9 & 10</title>
+
+  <meta name="description"
+        content="Bio with Ashutosh Modi - Biology learning website for Class 9 and Class 10 students.">
+  <meta name="theme-color" content="#080b20">
+
+  <style>
+    /* =========================================================
+       BIO WITH ASHUTOSH MODI
+       Premium Biology Website
+       Made by Mayank Kashyap
+    ========================================================= */
+
+    :root {
+      --bg: #070916;
+      --bg2: #0d1230;
+      --card: rgba(255,255,255,0.075);
+      --card-border: rgba(255,255,255,0.14);
+      --text: #f7f8ff;
+      --muted: #b9c0dc;
+      --blue: #4da6ff;
+      --cyan: #36e0ff;
+      --purple: #9b5cff;
+      --pink: #ff4fd8;
+      --gold: #ffd166;
+      --green: #4dffb2;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(77,166,255,.18), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(155,92,255,.18), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(255,79,216,.12), transparent 32%),
+        linear-gradient(135deg, var(--bg), var(--bg2));
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Animated background */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -2;
+      opacity: .45;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 45px 45px;
+      animation: gridMove 15s linear infinite;
+    }
+
+    @keyframes gridMove {
+      from { transform: translateY(0); }
+      to { transform: translateY(45px); }
+    }
+
+    /* Floating blobs */
+    .blob {
+      position: fixed;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: .18;
+      pointer-events: none;
+      z-index: -1;
+      animation: blobFloat 12s ease-in-out infinite alternate;
+    }
+
+    .blob.one {
+      background: var(--blue);
+      top: 10%;
+      left: -80px;
+    }
+
+    .blob.two {
+      background: var(--purple);
+      right: -80px;
+      top: 45%;
+      animation-delay: -4s;
+    }
+
+    .blob.three {
+      background: var(--pink);
+      left: 35%;
+      bottom: -100px;
+      animation-delay: -7s;
+    }
+
+    @keyframes blobFloat {
+      from {
+        transform: translate(0,0) scale(1);
+      }
+      to {
+        transform: translate(50px,-40px) scale(1.25);
+      }
+    }
+
+    /* ================= WELCOME ================= */
+
+    .welcome {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background:
+        radial-gradient(circle at center, #182052 0%, #080b20 65%);
+      transition: opacity .7s ease, visibility .7s ease;
+    }
+
+    .welcome.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .welcome-box {
+      width: min(650px, 100%);
+      padding: 45px 30px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 30px;
+      background: rgba(255,255,255,.07);
+      backdrop-filter: blur(25px);
+      box-shadow: var(--shadow);
+      animation: welcomeIn .9s ease;
+    }
+
+    @keyframes welcomeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px) scale(.94);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .dna {
+      font-size: 70px;
+      display: inline-block;
+      animation: dnaSpin 4s ease-in-out infinite;
+    }
+
+    @keyframes dnaSpin {
+      0%,100% { transform: rotate(-8deg) translateY(0); }
+      50% { transform: rotate(8deg) translateY(-12px); }
+    }
+
+    .welcome h2 {
+      font-size: clamp(28px, 6vw, 48px);
+      margin: 12px 0;
+      background: linear-gradient(90deg, var(--cyan), var(--purple), var(--pink));
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: gradientMove 4s linear infinite;
+    }
+
+    @keyframes gradientMove {
+      to { background-position: 200% center; }
+    }
+
+    .welcome p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      position: relative;
+      padding: 80px 20px 45px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .top-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 15px;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 100px;
+      background: rgba(255,255,255,.06);
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 25px rgba(77,166,255,.08);
+    }
+
+    .live-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 12px var(--green);
+      animation: livePulse 1.4s infinite;
+    }
+
+    @keyframes livePulse {
+      50% {
+        transform: scale(1.5);
+        opacity: .55;
+      }
+    }
+
+    header h1 {
+      font-size: clamp(40px, 9vw, 85px);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-bottom: 18px;
+      text-shadow: 0 10px 40px rgba(0,0,0,.4);
+    }
+
+    header h1 span {
+      display: block;
+      background: linear-gradient(
+        90deg,
+        var(--cyan),
+        #fff,
+        var(--purple),
+        var(--pink),
+        var(--cyan)
+      );
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: gradientMove 7s linear infinite;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: clamp(16px, 3vw, 21px);
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    /* ================= VISITOR ================= */
+
+    .visitor {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      z-index: 100;
+      padding: 10px 15px;
+      border-radius: 100px;
+      background: rgba(10,14,38,.72);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 0 25px rgba(77,166,255,.13);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .visitor b {
+      color: var(--cyan);
+      font-size: 15px;
+    }
+
+    /* ================= NAV ================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      padding: 12px 15px;
+      background: rgba(7,9,22,.65);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      padding: 9px 15px;
+      border-radius: 100px;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: white;
+      background: rgba(77,166,255,.12);
+      transform: translateY(-2px);
+    }
+
+    /* ================= MAIN ================= */
+
+    main {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title .small {
+      color: var(--cyan);
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    .section-title h2 {
+      font-size: clamp(28px, 5vw, 45px);
+      margin-top: 8px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    /* ================= HERO CARD ================= */
+
+    .hero-card {
+      position: relative;
+      padding: 50px 30px;
+      text-align: center;
+      border-radius: 30px;
+      border: 1px solid var(--card-border);
+      background: linear-gradient(
+        135deg,
+        rgba(77,166,255,.10),
+        rgba(155,92,255,.08),
+        rgba(255,79,216,.07)
+      );
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(54,224,255,.08);
+      filter: blur(10px);
+      top: -170px;
+      right: -120px;
+    }
+
+    .hero-card h2 {
+      font-size: clamp(28px, 6vw, 55px);
+      margin-bottom: 15px;
+    }
+
+    .hero-card h2 span {
+      color: var(--gold);
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      max-width: 750px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    /* ================= BUTTON ================= */
+
+    .btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 25px;
+      padding: 13px 22px;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,.15);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: linear-gradient(100deg, #247cff, #8b4dff);
+      box-shadow: 0 10px 35px rgba(77,100,255,.25);
+      overflow: hidden;
+      transition: .3s;
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 70%;
+      height: 100%;
+      transform: skewX(-20deg);
+      background: rgba(255,255,255,.28);
+      transition: .5s;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(77,100,255,.4);
+    }
+
+    .btn:hover::after {
+      left: 130%;
+    }
+
+    /* ================= CARDS ================= */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      position: relative;
+      padding: 28px;
+      border-radius: 25px;
+      border: 1px solid var(--card-border);
+      background: var(--card);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: .4s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: var(--blue);
+      opacity: .08;
+      filter: blur(15px);
+      right: -60px;
+      top: -60px;
+    }
+
+    .card:hover {
+      transform: translateY(-9px);
+      border-color: rgba(77,166,255,.4);
+      box-shadow:
+        0 25px 60px rgba(0,0,0,.35),
+        0 0 35px rgba(77,166,255,.08);
+    }
+
+    .card-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      font-size: 27px;
+      background: linear-gradient(
+        135deg,
+        rgba(77,166,255,.18),
+        rgba(155,92,255,.18)
+      );
+      border: 1px solid rgba(255,255,255,.1);
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 6px 11px;
+      border-radius: 100px;
+      background: rgba(255,209,102,.09);
+      color: var(--gold);
+      font-size: 12px;
+      border: 1px solid rgba(255,209,102,.18);
+    }
+
+    /* ================= CHAPTERS ================= */
+
+    .chapter-list {
+      display: grid;
+      gap: 15px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .chapter {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(255,255,255,.1);
+      transition: .3s;
+    }
+
+    .chapter:hover {
+      transform: translateX(7px);
+      background: rgba(77,166,255,.08);
+    }
+
+    .chapter-number {
+      min-width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      font-weight: bold;
+    }
+
+    .chapter strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .chapter small {
+      color: var(--muted);
+    }
+
+    /* ================= PROFILE ================= */
+
+    .profile {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 35px;
+      align-items: center;
+      padding: 35px;
+      border-radius: 30px;
+      background: rgba(255,255,255,.065);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .profile-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 30px;
+      object-fit: cover;
+      border: 2px solid rgba(255,255,255,.15);
+      box-shadow:
+        0 0 0 7px rgba(77,166,255,.05),
+        0 0 45px rgba(77,166,255,.16);
+      transition: .4s;
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.03) rotate(1deg);
+    }
+
+    .profile h2 {
+      font-size: clamp(30px, 5vw, 48px);
+      margin-bottom: 8px;
+    }
+
+    .profile h2 span {
+      color: var(--cyan);
+    }
+
+    .profile-role {
+      color: var(--gold);
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .profile p {
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .profile-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .pill {
+      padding: 8px 12px;
+      border-radius: 100px;
+      background: rgba(255,255,255,.06);
+      color: var(--muted);
+      border: 1px solid rgba(255,255,255,.1);
+      font-size: 13px;
+    }
+
+    /* ================= GALLERY ================= */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 22px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 12px 35px rgba(0,0,0,.25);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: .6s ease;
+    }
+
+    .gallery-item::after {
+      content: "🔍 View";
+      position: absolute;
+      inset: auto 12px 12px 12px;
+      padding: 9px;
+      border-radius: 100px;
+      text-align: center;
+      color: white;
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: .35s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1) rotate(1deg);
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ================= COMING SOON ================= */
+
+    .coming {
+      position: relative;
+      text-align: center;
+      padding: 55px 25px;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid rgba(155,92,255,.25);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(77,166,255,.09),
+          rgba(155,92,255,.12),
+          rgba(255,79,216,.07)
+        );
+    }
+
+    .coming-icon {
+      font-size: 55px;
+      display: inline-block;
+      animation: floatIcon 3s ease-in-out infinite;
+    }
+
+    @keyframes floatIcon {
+      50% { transform: translateY(-12px) rotate(4deg); }
+    }
+
+    .coming h2 {
+      margin: 12px 0;
+      font-size: clamp(28px, 5vw, 43px);
+    }
+
+    .coming p {
+      color: var(--muted);
+    }
+
+    /* ================= STATS ================= */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(255,255,255,.09);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      color: var(--cyan);
+      margin-bottom: 5px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ================= PHOTO VIEWER ================= */
+
+    .photo-viewer {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0,0,0,.88);
+      backdrop-filter: blur(12px);
+    }
+
+    .photo-viewer.active {
+      display: flex;
+      animation: viewerIn .3s ease;
+    }
+
+    @keyframes viewerIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .photo-viewer img {
+      max-width: min(1000px, 94vw);
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 18px;
+      box-shadow: 0 20px 80px rgba(0,0,0,.6);
+    }
+
+    .close-photo,
+    .photo-prev,
+    .photo-next {
+      position: absolute;
+      border: 0;
+      color: white;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 22px;
+      backdrop-filter: blur(10px);
+      transition: .25s;
+    }
+
+    .close-photo {
+      top: 20px;
+      right: 20px;
+    }
+
+    .photo-prev {
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .photo-next {
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .close-photo:hover,
+    .photo-prev:hover,
+    .photo-next:hover {
+      background: rgba(77,166,255,.25);
+      transform: scale(1.08);
+    }
+
+    .photo-prev:hover,
+    .photo-next:hover {
+      transform: translateY(-50%) scale(1.08);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      margin-top: 40px;
+      padding: 35px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: var(--muted);
+    }
+
+    footer strong {
+      color: var(--gold);
+    }
+
+    footer .footer-title {
+      color: white;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    /* ================= SCROLL TOP ================= */
+
+    #topBtn {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 80;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.15);
+      background: rgba(10,14,38,.8);
+      color: white;
+      cursor: pointer;
+      display: none;
+      backdrop-filter: blur(12px);
+      transition: .3s;
+    }
+
+    #topBtn:hover {
+      background: rgba(77,166,255,.25);
+      transform: translateY(-4px);
+    }
+
+    /* ================= REVEAL ANIMATION ================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 850px) {
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .profile {
+        grid-template-columns: 220px 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      header {
+        padding-top: 70px;
+      }
+
+      .visitor {
+        top: 10px;
+        right: 10px;
+        font-size: 11px;
+      }
+
+      .visitor b {
+        font-size: 13px;
+      }
+
+      nav {
+        overflow-x: auto;
+      }
+
+      .nav-inner {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        width: max-content;
+      }
+
+      nav a {
+        white-space: nowrap;
+      }
+
+      section {
+        padding: 50px 0;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .profile {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 25px;
+      }
+
+      .profile-photo {
+        width: min(220px, 70vw);
+        margin: auto;
+      }
+
+      .profile-pills {
+        justify-content: center;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-prev {
+        left: 8px;
+      }
+
+      .photo-next {
+        right: 8px;
+      }
+
+      .photo-viewer img {
+        max-width: 88vw;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .welcome-box {
+        padding: 35px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- WELCOME POPUP -->
+  <!-- Background decorations -->
+  <div class="blob one"></div>
+  <div class="blob two"></div>
+  <div class="blob three"></div>
 
-<div class="modal" id="welcome">
-<div class="modal-box">
+  <!-- ================= WELCOME SCREEN ================= -->
 
-<div class="spark">✦</div>
+  <div class="welcome" id="welcome">
+    <div class="welcome-box">
+      <div class="dna">🧬</div>
 
-<h2>Welcome to <span>Bio</span></h2>
-<h2>with Ashutosh Modi</h2>
+      <h2>Welcome to Bio with Ashutosh Modi</h2>
 
-<p>
-Explore clear Biology notes, important concepts and exam-focused questions.
-</p>
+      <p>
+        Biology • Classes 9 & 10 • Learn Biology. Understand Better.
+      </p>
 
-<button class="btn" onclick="enterSite()">
-Enter Website
-</button>
+      <button class="btn" onclick="enterSite()">
+        🚀 Enter Website
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= VISITOR COUNTER ================= -->
+
+  <div class="visitor">
+    👁 Visits:
+    <b id="count">...</b>
+  </div>
+
+  <!-- ================= HEADER ================= -->
+
+  <header id="home">
+
+    <div class="top-line">
+      <span class="live-dot"></span>
+      Biology Learning Portal
+    </div>
+
+    <h1>
+      <span>Bio with Ashutosh Modi</span>
+    </h1>
+
+    <p>
+      Biology • Classes 9 & 10
+    </p>
+
+    <div class="subtitle">
+      🧬 Learn Biology. Understand Better.
+    </div>
+
+  </header>
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#home">Home</a>
+      <a href="#chapters">Chapters</a>
+      <a href="#profile">Profile</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#coming">Coming Soon</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+
+    <section>
+      <div class="hero-card reveal">
+
+        <h2>
+          Explore the World of
+          <span>Biology 🧬</span>
+        </h2>
+
+        <p>
+          Welcome to a simple and attractive Biology learning space.
+          Here you can explore important topics from Class 9 and Class 10,
+          revise chapters and understand Biology in an easier way.
+        </p>
+
+        <a class="btn" href="#chapters">
+          📚 Explore Chapters
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ================= QUICK CARDS ================= -->
+
+    <section>
+
+      <div class="section-title reveal">
+        <div class="small">Start Learning</div>
+        <h2>What You'll Find Here</h2>
+        <p>Simple learning. Better understanding.</p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card reveal">
+          <div class="card-icon">🧬</div>
+          <h3>Biology Concepts</h3>
+          <p>
+            Learn important Biology concepts in a simple and understandable
+            way.
+          </p>
+          <span class="tag">Concepts</span>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">📖</div>
+          <h3>Class 9 & 10</h3>
+          <p>
+            Useful chapter content for students studying Biology in
+            Classes 9 and 10.
+          </p>
+          <span class="tag">NCERT Level</span>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">🎯</div>
+          <h3>Easy Revision</h3>
+          <p>
+            Revise important topics quickly and build stronger understanding
+            before exams.
+          </p>
+          <span class="tag">Revision</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= CHAPTERS ================= -->
+
+    <section id="chapters">
+
+      <div class="section-title reveal">
+        <div class="small">Study Section</div>
+        <h2>Biology Chapters</h2>
+        <p>Important topics currently available.</p>
+      </div>
+
+      <div class="chapter-list">
+
+        <div class="chapter reveal">
+          <div class="chapter-number">10</div>
+          <div>
+            <strong>Life Processes</strong>
+            <small>
+              Nutrition, respiration, transportation and excretion.
+            </small>
+          </div>
+        </div>
+
+        <div class="chapter reveal">
+          <div class="chapter-number">10</div>
+          <div>
+            <strong>Control and Coordination</strong>
+            <small>
+              Nervous system, hormones and coordination in organisms.
+            </small>
+          </div>
+        </div>
+
+        <div class="chapter reveal">
+          <div class="chapter-number">9</div>
+          <div>
+            <strong>The Fundamental Unit of Life</strong>
+            <small>
+              Cell structure, organelles and basic functions of cells.
+            </small>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= PROFILE ================= -->
+
+    <section id="profile">
+
+      <div class="section-title reveal">
+        <div class="small">About</div>
+        <h2>Meet Ashutosh Modi</h2>
+        <p>The person behind this Biology learning section.</p>
+      </div>
+
+      <div class="profile reveal">
+
+        <!--
+          PROFILE PHOTO:
+          Replace this filename if your photo has another name.
+        -->
+        <img
+          class="profile-photo"
+          src="images/ashutosh.jpg"
+          alt="Ashutosh Modi"
+          onerror="this.style.display='none';"
+        >
+
+        <div>
+
+          <h2>
+            Ashutosh <span>Modi</span>
+          </h2>
+
+          <div class="profile-role">
+            🧬 Biology Learning
+          </div>
+
+          <p>
+            Welcome to Bio with Ashutosh Modi. This website is designed
+            to make Biology learning more interesting, simple and engaging
+            for students of Classes 9 and 10.
+          </p>
+
+          <div class="profile-pills">
+            <span class="pill">🧬 Biology</span>
+            <span class="pill">📚 Class 9</span>
+            <span class="pill">📘 Class 10</span>
+            <span class="pill">🎯 Learning</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= STATS ================= -->
+
+    <section>
+
+      <div class="section-title reveal">
+        <div class="small">Website</div>
+        <h2>Learning Dashboard</h2>
+      </div>
+
+      <div class="stats">
+
+        <div class="stat reveal">
+          <strong>2</strong>
+          <span>Class Levels</span>
+        </div>
+
+        <div class="stat reveal">
+          <strong>3</strong>
+          <span>Featured Chapters</span>
+        </div>
+
+        <div class="stat reveal">
+          <strong>∞</strong>
+          <span>Learning Possibilities</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+
+    <section id="gallery">
+
+      <div class="section-title reveal">
+        <div class="small">Memories</div>
+        <h2>Biology Gallery</h2>
+        <p>Click any image to view it fullscreen.</p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div
+          class="gallery-item reveal"
+          onclick="openPhoto(0)"
+        >
+          <img
+            src="images/gallery-01.jpg"
+            alt="Biology Gallery Image 1"
+            loading="lazy"
+          >
+        </div>
+
+        <div
+          class="gallery-item reveal"
+          onclick="openPhoto(1)"
+        >
+          <img
+            src="images/gallery-02.jpg"
+            alt="Biology Gallery Image 2"
+            loading="lazy"
+          >
+        </div>
+
+        <div
+          class="gallery-item reveal"
+          onclick="openPhoto(2)"
+        >
+          <img
+            src="images/gallery-03.jpg"
+            alt="Biology Gallery Image 3"
+            loading="lazy"
+          >
+        </div>
+
+        <div
+          class="gallery-item reveal"
+          onclick="openPhoto(3)"
+        >
+          <img
+            src="images/gallery-04.jpg"
+            alt="Biology Gallery Image 4"
+            loading="lazy"
+          >
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= COMING SOON ================= -->
+
+    <section id="coming">
+
+      <div class="coming reveal">
+
+        <div class="coming-icon">🚀</div>
+
+        <h2>More Biology Content Coming Soon</h2>
+
+        <p>
+          More chapters, notes, questions, animations and learning resources
+          will be added here in future.
+        </p>
+
+        <a href="#home" class="btn">
+          ⬆ Back to Top
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="footer-title">
+      🧬 Bio with Ashutosh Modi
+    </div>
+
+    <p>
+      Learn Biology. Understand Better.
+    </p>
+
+    <p style="margin-top:12px;">
+      Made with ❤️ by
+      <strong>Mayank Kashyap</strong>
+    </p>
+
+    <p style="margin-top:8px;font-size:12px;">
+      © <span id="year"></span> Bio with Ashutosh Modi
+    </p>
+
+  </footer>
+
+  <!-- ================= PHOTO VIEWER ================= -->
+
+  <div
+    class="photo-viewer"
+    id="photoViewer"
+    onclick="closePhoto(event)"
+  >
+
+    <button
+      class="close-photo"
+      onclick="closePhotoDirect()"
+      aria-label="Close"
+    >
+      ✕
+    </button>
+
+    <button
+      class="photo-prev"
+      onclick="previousPhoto(event)"
+      aria-label="Previous"
+    >
+      ‹
+    </button>
 
-</div>
-</div>
+    <img
+      id="viewerImage"
+      src=""
+      alt="Gallery Preview"
+    >
+
+    <button
+      class="photo-next"
+      onclick="nextPhoto(event)"
+      aria-label="Next"
+    >
+      ›
+    </button>
 
+  </div>
 
-<!-- HEADER -->
+  <!-- ================= TOP BUTTON ================= -->
 
-<header>
-<div class="wrap nav">
+  <button
+    id="topBtn"
+    onclick="window.scrollTo({top:0, behavior:'smooth'})"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
 
-<a class="brand" href="#">
-Bio <span>with Ashutosh Modi</span>
-</a>
 
-<nav>
-<a href="#notes">Notes</a>
-<a href="#profile">Profile</a>
-<a href="#gallery">Gallery</a>
-</nav>
+  <!-- =========================================================
+       FIREBASE + WEBSITE JAVASCRIPT
+  ========================================================= -->
 
-</div>
-</header>
+  <script type="module">
 
+    /* =========================================================
+       FIREBASE IMPORTS
+    ========================================================= */
 
-<!-- VISITOR -->
+    import { initializeApp }
+      from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 
-<div class="visitor">
-👁 Visitors: <b id="count">0</b>
-</div>
+    import {
+      getFirestore,
+      doc,
+      getDoc,
+      setDoc,
+      updateDoc,
+      increment
+    }
+      from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 
-<main>
+    /* =========================================================
+       FIREBASE CONFIG
+       
+       IMPORTANT:
+       Replace the values below with your own Firebase Web App
+       configuration.
+    ========================================================= */
 
-<!-- HERO -->
+    const firebaseConfig = {
 
-<section class="hero">
+      apiKey: "PASTE_YOUR_API_KEY",
 
-<div class="wrap hero-content">
+      authDomain: "PASTE_YOUR_PROJECT_ID.firebaseapp.com",
 
-<div class="eyebrow">
-Biology • Classes 9 & 10
-</div>
+      projectId: "PASTE_YOUR_PROJECT_ID",
 
-<h1>
-Learn Biology.<br>
-<em>Understand Better.</em>
-</h1>
+      storageBucket: "PASTE_YOUR_PROJECT_ID.firebasestorage.app",
 
-<p>
-Bio with Ashutosh Modi — chapter-wise learning designed to make Biology concepts simple, clear and exam-ready.
-</p>
+      messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID",
 
-<div class="actions">
+      appId: "PASTE_YOUR_APP_ID"
 
-<a class="btn" href="#notes">
-Explore Notes
-</a>
+    };
 
-<a class="btn ghost" href="#profile">
-Meet Ashutosh Modi
-</a>
 
-</div>
+    /* =========================================================
+       FIREBASE INITIALIZATION
+    ========================================================= */
 
-</div>
+    let firebaseReady = false;
 
-<div class="orbit">
-<div class="core">BIOLOGY</div>
-</div>
+    try {
 
-</section>
+      if (
+        firebaseConfig.apiKey !== "PASTE_YOUR_API_KEY" &&
+        firebaseConfig.projectId !== "PASTE_YOUR_PROJECT_ID"
+      ) {
 
+        const app = initializeApp(firebaseConfig);
 
-<!-- NOTES -->
+        const db = getFirestore(app);
 
-<section id="notes">
+        firebaseReady = true;
 
-<div class="wrap">
 
-<div class="section-head reveal">
+        /* =====================================================
+           GLOBAL VISIT COUNTER
 
-<div class="mini">
-Chapter Wise Notes
-</div>
+           Firestore document:
+           collection = "websiteStats"
+           document   = "main"
+        ===================================================== */
 
-<h2>
-Class 10 Biology
-</h2>
+        const statsRef = doc(
+          db,
+          "websiteStats",
+          "main"
+        );
 
-<p>
-Abhi detailed notes ke liye 3 selected chapters available hain.
-Baaki chapters Coming Soon hain.
-</p>
 
-</div>
+        async function updateGlobalVisits() {
 
+          const snap = await getDoc(statsRef);
 
-<div class="chapter-grid">
+          if (!snap.exists()) {
 
+            await setDoc(statsRef, {
+              visits: 1
+            });
 
-<!-- CHAPTER 1 -->
+            document.getElementById("count").textContent = "1";
 
-<article class="chapter reveal">
+          } else {
 
-<div class="num">
-CLASS 10 • CHAPTER 01
-</div>
+            await updateDoc(statsRef, {
+              visits: increment(1)
+            });
 
-<h3>
-Life Processes
-</h3>
+            const updatedSnap = await getDoc(statsRef);
 
-<p>
-Nutrition, respiration, transportation and excretion — concepts, processes and exam questions.
-</p>
+            const visits =
+              updatedSnap.data().visits || 0;
 
-<button class="btn open-notes">
-Open Detailed Notes
-</button>
+            document.getElementById("count").textContent =
+              Number(visits).toLocaleString();
 
-<div class="notes">
+          }
 
-<h4>1. Life Processes — Overview</h4>
+        }
 
-<p>
-Life processes are the basic activities required to maintain an organism.
-In Class 10, the major life processes are nutrition, respiration,
-transportation and excretion.
-</p>
 
-<h4>2. Nutrition</h4>
+        updateGlobalVisits().catch(error => {
 
-<p>
-Nutrition provides materials and energy needed for growth, repair and maintenance.
-In autotrophic nutrition, organisms such as green plants prepare food using carbon dioxide
-and water in the presence of sunlight and chlorophyll.
-In heterotrophic nutrition, organisms obtain food from other organisms.
-</p>
+          console.error(
+            "Firebase visit counter error:",
+            error
+          );
 
-<p>
-Human digestion involves ingestion, digestion, absorption, assimilation and egestion.
-The mouth begins digestion; the stomach provides an acidic medium and enzymes;
-the small intestine completes digestion and absorbs nutrients through villi;
-the large intestine mainly absorbs water.
-</p>
+          document.getElementById("count").textContent = "—";
 
-<h4>3. Respiration</h4>
+        });
 
-<p>
-Respiration releases energy from food.
-Aerobic respiration uses oxygen and generally releases more energy,
-while anaerobic pathways occur without oxygen.
-In humans, gas exchange occurs in the alveoli of the lungs.
-</p>
+      } else {
 
-<h4>4. Transportation</h4>
+        console.warn(
+          "Firebase config has not been added yet."
+        );
 
-<p>
-In humans, blood transports oxygen, carbon dioxide, nutrients, hormones and wastes.
-The heart pumps blood through pulmonary and systemic circulation.
-Red blood cells contain haemoglobin.
-Plants transport water and minerals through xylem and food through phloem.
-</p>
+        document.getElementById("count").textContent = "—";
 
-<h4>5. Excretion</h4>
+      }
 
-<p>
-Excretion removes metabolic wastes.
-In humans, kidneys filter blood and form urine through processes including filtration,
-reabsorption and secretion.
-</p>
+    } catch (error) {
 
-<h4>Easy Questions</h4>
+      console.error(
+        "Firebase initialization error:",
+        error
+      );
 
-<div class="qa">
-<b>Q. What is nutrition?</b>
-<span>Ans. It is the process by which an organism obtains and uses food.</span>
-</div>
+      document.getElementById("count").textContent = "—";
 
-<div class="qa">
-<b>Q. Where does gas exchange occur in human lungs?</b>
-<span>Ans. Mainly across the thin walls of the alveoli.</span>
-</div>
+    }
 
-<div class="qa">
-<b>Q. What is the function of xylem?</b>
-<span>Ans. It transports water and minerals from roots to other parts of a plant.</span>
-</div>
 
-<h4>Exam-Level Questions</h4>
+    /* =========================================================
+       WELCOME SCREEN
+    ========================================================= */
 
-<div class="qa">
-<b>
-Q. Why is separation of oxygenated and deoxygenated blood important in humans?
-</b>
+    window.enterSite = function () {
 
-<span>
-Ans. It helps maintain efficient oxygen supply by preventing significant mixing
-of oxygen-rich and oxygen-poor blood.
-</span>
-</div>
+      const welcome =
+        document.getElementById("welcome");
 
-<div class="qa">
-<b>
-Q. Explain the role of villi in the small intestine.
-</b>
+      welcome.classList.add("hide");
 
-<span>
-Ans. Villi greatly increase the absorptive surface area and contain a rich network
-of blood vessels, helping digested nutrients enter the blood efficiently.
-</span>
-</div>
+      document.body.style.overflow = "";
 
-</div>
+    };
 
-</article>
 
+    /* =========================================================
+       YEAR
+    ========================================================= */
 
-<!-- CHAPTER 2 -->
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
 
-<article class="chapter reveal">
 
-<div class="num">
-CLASS 10 • CHAPTER 02
-</div>
+    /* =========================================================
+       REVEAL ANIMATION
+    ========================================================= */
 
-<h3>
-Control and Coordination
-</h3>
+    const revealElements =
+      document.querySelectorAll(".reveal");
 
-<p>
-Nervous system, reflex action, brain, plant hormones and animal hormones.
-</p>
+    const revealObserver =
+      new IntersectionObserver(
 
-<button class="btn open-notes">
-Open Detailed Notes
-</button>
+        (entries, observer) => {
 
-<div class="notes">
+          entries.forEach(entry => {
 
-<h4>1. Coordination</h4>
+            if (entry.isIntersecting) {
 
-<p>
-Coordination enables an organism to detect changes and produce suitable responses.
-In animals it mainly involves the nervous system and endocrine system.
-</p>
+              entry.target.classList.add("show");
 
-<h4>2. Nervous System</h4>
+              observer.unobserve(entry.target);
 
-<p>
-A neuron is the structural and functional unit of the nervous system.
-It receives and transmits information.
-A typical neuron has dendrites, a cell body and an axon.
-</p>
+            }
 
-<h4>3. Reflex Action</h4>
+          });
 
-<p>
-A reflex action is a quick, automatic response to a stimulus.
-Many reflexes are coordinated through the spinal cord.
-</p>
+        },
 
-<h4>4. Human Brain</h4>
+        {
+          threshold: 0.12
+        }
 
-<p>
-The brain is protected by the skull and associated protective structures.
-Major regions include the forebrain, midbrain and hindbrain.
-</p>
+      );
 
-<h4>5. Plant Coordination</h4>
 
-<p>
-Plants respond to stimuli through movements and chemical signals.
-Auxin is involved in growth responses such as phototropism.
-</p>
+    revealElements.forEach(element => {
 
-<h4>6. Hormonal Coordination</h4>
+      revealObserver.observe(element);
 
-<p>
-Endocrine glands release hormones into the bloodstream.
-Hormones regulate processes such as growth, metabolism and responses to stress.
-</p>
+    });
 
-<h4>Easy Questions</h4>
 
-<div class="qa">
-<b>Q. What is a reflex action?</b>
-<span>Ans. A rapid and automatic response to a stimulus.</span>
-</div>
+    /* =========================================================
+       SCROLL TO TOP BUTTON
+    ========================================================= */
 
-<div class="qa">
-<b>Q. What is the basic unit of the nervous system?</b>
-<span>Ans. Neuron.</span>
-</div>
+    const topBtn =
+      document.getElementById("topBtn");
 
-<h4>Exam-Level Questions</h4>
+    window.addEventListener("scroll", () => {
 
-<div class="qa">
-<b>Q. How does a reflex arc help an organism?</b>
-<span>
-Ans. It provides a rapid pathway for responding to a stimulus.
-</span>
-</div>
+      if (window.scrollY > 500) {
 
-<div class="qa">
-<b>Q. How do hormones differ from nervous impulses?</b>
-<span>
-Ans. Nervous signals are generally rapid and travel through neurons,
-whereas hormones are chemical messengers transported through body fluids.
-</span>
-</div>
+        topBtn.style.display = "block";
 
-</div>
+      } else {
 
-</article>
+        topBtn.style.display = "none";
 
+      }
 
-<!-- CHAPTER 3 -->
+    });
 
-<article class="chapter reveal">
 
-<div class="num">
-CLASS 9 • CHAPTER 01
-</div>
+    /* =========================================================
+       PHOTO GALLERY
+    ========================================================= */
 
-<h3>
-The Fundamental Unit of Life
-</h3>
+    const photos = [
 
-<p>
-Cell structure, organelles, transport and cell division.
-</p>
+      "images/gallery-01.jpg",
 
-<button class="btn open-notes">
-Open Detailed Notes
-</button>
+      "images/gallery-02.jpg",
 
-<div class="notes">
+      "images/gallery-03.jpg",
 
-<h4>1. Cell — Basic Unit of Life</h4>
+      "images/gallery-04.jpg"
 
-<p>
-The cell is the basic structural and functional unit of living organisms.
-Organisms may be unicellular or multicellular.
-</p>
+    ];
 
-<h4>2. Plasma Membrane</h4>
+    let currentPhoto = 0;
 
-<p>
-The plasma membrane forms the boundary of the cell and is selectively permeable.
-It regulates movement of substances into and out of the cell.
-</p>
 
-<h4>3. Cell Wall</h4>
+    window.openPhoto = function(index) {
 
-<p>
-Plant cells have a rigid cell wall outside the plasma membrane.
-It provides support and protection.
-</p>
+      currentPhoto = index;
 
-<h4>4. Nucleus</h4>
+      const viewer =
+        document.getElementById("photoViewer");
 
-<p>
-The nucleus contains genetic material and helps control cellular activities.
-Chromosomes carry genes.
-</p>
+      const image =
+        document.getElementById("viewerImage");
 
-<h4>5. Cell Organelles</h4>
+      image.src = photos[currentPhoto];
 
-<ul>
+      viewer.classList.add("active");
 
-<li>
-<b>Mitochondria:</b>
-sites of aerobic respiration and major energy release.
-</li>
+      document.body.style.overflow = "hidden";
 
-<li>
-<b>Endoplasmic reticulum:</b>
-involved in synthesis and transport of materials.
-</li>
+    };
 
-<li>
-<b>Golgi apparatus:</b>
-modifies, packages and helps transport substances.
-</li>
 
-<li>
-<b>Lysosomes:</b>
-contain digestive enzymes.
-</li>
+    window.closePhotoDirect = function() {
 
-<li>
-<b>Ribosomes:</b>
-involved in protein synthesis.
-</li>
+      const viewer =
+        document.getElementById("photoViewer");
 
-<li>
-<b>Plastids:</b>
-plant-cell organelles; chloroplasts carry out photosynthesis.
-</li>
+      viewer.classList.remove("active");
 
-<li>
-<b>Vacuoles:</b>
-storage structures.
-</li>
+      document.body.style.overflow = "";
 
-</ul>
+    };
 
-<h4>6. Cell Division</h4>
 
-<p>
-Cell division is important for growth, repair and reproduction.
-Mitosis generally produces two genetically similar daughter cells.
-</p>
+    window.closePhoto = function(event) {
 
-<h4>Easy Questions</h4>
+      if (
+        event.target.id === "photoViewer"
+      ) {
 
-<div class="qa">
-<b>Q. Why is the plasma membrane selectively permeable?</b>
-<span>
-Ans. It permits some substances to cross while restricting others.
-</span>
-</div>
+        closePhotoDirect();
 
-<div class="qa">
-<b>Q. What is the function of mitochondria?</b>
-<span>
-Ans. They are major sites of aerobic respiration and energy release.
-</span>
-</div>
+      }
 
-<h4>Exam-Level Questions</h4>
+    };
 
-<div class="qa">
-<b>
-Q. What happens to a plant cell in a hypotonic solution?
-</b>
 
-<span>
-Ans. Water enters the cell by osmosis and the cell becomes turgid.
-</span>
-</div>
+    window.nextPhoto = function(event) {
 
-<div class="qa">
-<b>
-Q. Why are lysosomes called digestive sacs?
-</b>
+      event.stopPropagation();
 
-<span>
-Ans. They contain enzymes that can digest worn-out cell components.
-</span>
-</div>
+      currentPhoto++;
 
-</div>
+      if (currentPhoto >= photos.length) {
 
-</article>
+        currentPhoto = 0;
 
-</div>
+      }
 
+      document.getElementById("viewerImage").src =
+        photos[currentPhoto];
 
-<div style="margin-top:70px" class="section-head reveal">
+    };
 
-<div class="mini">
-Remaining Chapters
-</div>
 
-<h2>
-Coming Soon
-</h2>
+    window.previousPhoto = function(event) {
 
-</div>
+      event.stopPropagation();
 
-<div class="soon reveal">
+      currentPhoto--;
 
-<h3>
-More Biology Chapters 🚀
-</h3>
+      if (currentPhoto < 0) {
 
-<p>
-Baaki Class 9 & 10 chapters ke detailed notes,
-questions and answers yahan future updates mein add kiye jayenge.
-</p>
+        currentPhoto = photos.length - 1;
 
-</div>
+      }
 
-</div>
+      document.getElementById("viewerImage").src =
+        photos[currentPhoto];
 
-</section>
+    };
 
 
-<!-- PROFILE -->
+    /* =========================================================
+       KEYBOARD GALLERY CONTROLS
+    ========================================================= */
 
-<section id="profile">
+    document.addEventListener("keydown", event => {
 
-<div class="wrap">
+      const viewer =
+        document.getElementById("photoViewer");
 
-<div class="section-head reveal">
+      if (!viewer.classList.contains("active")) {
+        return;
+      }
 
-<div class="mini">
-Professional Profile
-</div>
+      if (event.key === "Escape") {
 
-<h2>
-Ashutosh Modi
-</h2>
+        closePhotoDirect();
 
-</div>
+      }
 
-<div class="profile reveal">
+      if (event.key === "ArrowRight") {
 
-<div class="pic">
-PROFILE<br>
-PICTURE<br>
-PLACEHOLDER
-</div>
+        nextPhoto(event);
 
-<div>
+      }
 
-<h2>
-Ashutosh Modi
-</h2>
+      if (event.key === "ArrowLeft") {
 
-<p>
-Biology educator profile section.
-Yahan future mein profile photo, introduction,
-teaching details aur additional information add ki ja sakti hai.
-</p>
+        previousPhoto(event);
 
-<p class="phone">
-📞 +91 9876543210
-</p>
+      }
 
-</div>
+    });
 
-</div>
 
-</div>
+    /* =========================================================
+       IMAGE ERROR HANDLING
+    ========================================================= */
 
-</section>
+    document.querySelectorAll(".gallery-item img")
+      .forEach((image, index) => {
 
+        image.addEventListener("error", () => {
 
-<!-- GALLERY -->
+          image.style.display = "none";
 
-<section id="gallery">
+          image.parentElement.style.background =
+            "linear-gradient(135deg,#10183b,#25134b)";
 
-<div class="wrap">
+          image.parentElement.innerHTML =
+            `<div style="
+              width:100%;
+              height:100%;
+              display:grid;
+              place-items:center;
+              text-align:center;
+              padding:20px;
+              color:#b9c0dc;
+              font-size:14px;
+            ">
+              🖼️ Gallery image ${index + 1}<br>
+              not found
+            </div>`;
 
-<div class="section-head reveal">
+        });
 
-<div class="mini">
-Gallery
-</div>
+      });
 
-<h2>
-Biology Memories
-</h2>
 
-<p>
-Biology learning moments, diagrams and educational memories.
-</p>
+    /* =========================================================
+       PREVENT SCROLL LOCK AFTER PAGE LOAD
+    ========================================================= */
 
-</div>
+    document.body.style.overflow = "";
 
-
-<div class="gallery-grid">
-
-<div class="gallery-item reveal" onclick="openPhoto(0)">
-
-<img
-src="images/gallery-01.jpg"
-alt="Reflex Action and Reflex Arc"
->
-
-<div class="gallery-label">
-Reflex Action
-</div>
-
-</div>
-
-
-<div class="gallery-item reveal">
-
-<div style="height:100%;display:grid;place-items:center;color:#d9b45a;">
-Coming Soon
-</div>
-
-</div>
-
-
-<div class="gallery-item reveal">
-
-<div style="height:100%;display:grid;place-items:center;color:#d9b45a;">
-Coming Soon
-</div>
-
-</div>
-
-
-<div class="gallery-item reveal">
-
-<div style="height:100%;display:grid;place-items:center;color:#d9b45a;">
-Coming Soon
-</div>
-
-</div>
-
-
-<div class="gallery-item reveal">
-
-<div style="height:100%;display:grid;place-items:center;color:#d9b45a;">
-Coming Soon
-</div>
-
-</div>
-
-
-<div class="gallery-item reveal">
-
-<div style="height:100%;display:grid;place-items:center;color:#d9b45a;">
-Coming Soon
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-
-<!-- FOOTER -->
-
-<footer>
-Made by <strong>Mayank Kashyap</strong>
-</footer>
-
-
-<!-- FULLSCREEN PHOTO VIEWER -->
-
-<div class="photo-viewer" id="photoViewer">
-
-<button class="viewer-close" onclick="closePhoto()">
-×
-</button>
-
-<button
-class="viewer-btn viewer-prev"
-onclick="previousPhoto()">
-‹
-</button>
-
-<img
-id="viewerImage"
-class="viewer-img"
-src=""
-alt="Gallery Photo"
->
-
-<button
-class="viewer-btn viewer-next"
-onclick="nextPhoto()">
-›
-</button>
-
-<div class="zoom-controls">
-
-<button onclick="zoomOut()">
-−
-</button>
-
-<button onclick="zoomIn()">
-+
-</button>
-
-</div>
-
-</div>
-
-
-<script>
-
-/* ================= PHOTO GALLERY ================= */
-
-const photos = [
-"images/gallery-01.jpg"
-];
-
-let currentPhoto = 0;
-let zoomLevel = 1;
-
-function openPhoto(index){
-
-currentPhoto = index;
-zoomLevel = 1;
-
-document
-.getElementById("photoViewer")
-.classList.add("active");
-
-updatePhoto();
-
-}
-
-function updatePhoto(){
-
-const img =
-document.getElementById("viewerImage");
-
-img.src = photos[currentPhoto];
-
-zoomLevel = 1;
-
-img.style.transform =
-"translate(0px, 0px) scale(1)";
-
-}
-
-function closePhoto(){
-
-document
-.getElementById("photoViewer")
-.classList.remove("active");
-
-}
-
-function nextPhoto(){
-
-if(photos.length <= 1) return;
-
-currentPhoto++;
-
-if(currentPhoto >= photos.length){
-currentPhoto = 0;
-}
-
-updatePhoto();
-
-}
-
-function previousPhoto(){
-
-if(photos.length <= 1) return;
-
-currentPhoto--;
-
-if(currentPhoto < 0){
-currentPhoto = photos.length - 1;
-}
-
-updatePhoto();
-
-}
-
-function zoomIn(){
-
-zoomLevel += 0.25;
-
-if(zoomLevel > 4){
-zoomLevel = 4;
-}
-
-document
-.getElementById("viewerImage")
-.style.transform =
-`scale(${zoomLevel})`;
-
-}
-
-function zoomOut(){
-
-zoomLevel -= 0.25;
-
-if(zoomLevel < 1){
-zoomLevel = 1;
-}
-
-document
-.getElementById("viewerImage")
-.style.transform =
-`scale(${zoomLevel})`;
-
-}
-
-
-/* ESC KEY */
-
-document.addEventListener("keydown",function(e){
-
-if(e.key === "Escape"){
-closePhoto();
-}
-
-if(e.key === "ArrowRight"){
-nextPhoto();
-}
-
-if(e.key === "ArrowLeft"){
-previousPhoto();
-}
-
-});
-
-
-/* BACKGROUND CLICK */
-
-document
-.getElementById("photoViewer")
-.addEventListener("click",function(e){
-
-if(e.target === this){
-closePhoto();
-}
-
-});
-
-
-/* ================= WEBSITE ================= */
-
-
-/* VISITOR COUNTER */
-
-const countKey =
-'bio_ashutosh_total_views';
-
-let count =
-Number(localStorage.getItem(countKey)||0)+1;
-
-localStorage.setItem(countKey,count);
-
-document.getElementById('count')
-.textContent =
-count.toLocaleString();
-
-
-/* WELCOME BUTTON */
-
-function enterSite(){
-
-document
-.getElementById('welcome')
-.style.display='none';
-
-try{
-
-const C =
-window.AudioContext ||
-window.webkitAudioContext;
-
-if(C){
-
-const c = new C();
-
-const o =
-c.createOscillator();
-
-const g =
-c.createGain();
-
-o.type='sine';
-
-o.frequency.setValueAtTime(
-660,
-c.currentTime
-);
-
-o.frequency.exponentialRampToValueAtTime(
-990,
-c.currentTime+.22
-);
-
-g.gain.setValueAtTime(
-.0001,
-c.currentTime
-);
-
-g.gain.exponentialRampToValueAtTime(
-.16,
-c.currentTime+.03
-);
-
-g.gain.exponentialRampToValueAtTime(
-.0001,
-c.currentTime+.42
-);
-
-o.connect(g);
-g.connect(c.destination);
-
-o.start();
-
-o.stop(
-c.currentTime+.45
-);
-
-}
-
-}catch(e){}
-
-}
-
-
-/* NOTES BUTTONS */
-
-document
-.querySelectorAll('.open-notes')
-.forEach(btn => {
-
-btn.addEventListener('click',()=>{
-
-const n =
-btn.nextElementSibling;
-
-n.classList.toggle('show');
-
-btn.textContent =
-n.classList.contains('show')
-? 'Close Detailed Notes'
-: 'Open Detailed Notes';
-
-});
-
-});
-
-
-/* SCROLL ANIMATION */
-
-const obs =
-new IntersectionObserver(
-es =>
-es.forEach(e=>{
-
-if(e.isIntersecting)
-e.target.classList.add('visible');
-
-}),
-{
-threshold:.12
-}
-);
-
-document
-.querySelectorAll('.reveal')
-.forEach(x=>obs.observe(x));
-
-</script>
+  </script>
 
 </body>
 </html>
